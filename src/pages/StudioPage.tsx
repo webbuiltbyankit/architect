@@ -4,12 +4,13 @@ import { Button } from '@/components/common/Button';
 import { AspectFrame } from '@/components/common/ImageComponents';
 import { editorialCopy } from '@/data/copy';
 import { useSeo } from '@/utils/seo';
+import { getAssetUrl } from '@/utils/assets';
 
 export const StudioPage: React.FC = () => {
   useSeo({
     title: 'The Studio & Design Philosophy',
     description: 'Learn about Arun Saini Architects — A Gurugram-based architectural and interior practice focused on proportion, materiality, and enduring spatial calm.',
-    image: '/images/projects/01-dining-open-plan.jpg',
+    image: getAssetUrl('/images/projects/01-dining-open-plan.jpg'),
   });
 
   const { studioPage } = editorialCopy;
@@ -50,7 +51,7 @@ export const StudioPage: React.FC = () => {
         <Container>
           <AspectFrame aspectRatio="16:9" className="rounded overflow-hidden shadow-sm">
             <img
-              src="/images/projects/01-dining-open-plan.jpg"
+              src={getAssetUrl('/images/projects/01-dining-open-plan.jpg')}
               alt="Arun Saini Architects Studio spatial reference dining pavilion"
               className="w-full h-full object-cover"
               loading="eager"
@@ -87,7 +88,7 @@ export const StudioPage: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <AspectFrame aspectRatio="4:5" className="rounded overflow-hidden shadow-sm">
                   <img
-                    src="/images/projects/02-navy-bedroom-primary.jpg"
+                    src={getAssetUrl('/images/projects/02-navy-bedroom-primary.jpg')}
                     alt="Navy bedroom tactile sanctuary detail"
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -95,7 +96,7 @@ export const StudioPage: React.FC = () => {
                 </AspectFrame>
                 <AspectFrame aspectRatio="4:5" className="rounded overflow-hidden shadow-sm sm:mt-10">
                   <img
-                    src="/images/projects/03-blush-bedroom-primary.jpg"
+                    src={getAssetUrl('/images/projects/03-blush-bedroom-primary.jpg')}
                     alt="Blush bedroom spatial balance detail"
                     className="w-full h-full object-cover"
                     loading="lazy"

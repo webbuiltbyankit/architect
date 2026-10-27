@@ -4,12 +4,13 @@ import { Button } from '@/components/common/Button';
 import { AspectFrame } from '@/components/common/ImageComponents';
 import { sectorsData } from '@/data/site';
 import { useSeo } from '@/utils/seo';
+import { getAssetUrl } from '@/utils/assets';
 
 export const SectorsPage: React.FC = () => {
   useSeo({
     title: 'Sectors & Typologies of Engagement',
     description: 'Explore the architectural and interior sectors addressed by Arun Saini Architects: Residential, Commercial, Institutional, Healthcare, and Hospitality.',
-    image: '/images/projects/01-dining-open-plan.jpg',
+    image: getAssetUrl('/images/projects/01-dining-open-plan.jpg'),
   });
 
   return (
@@ -81,7 +82,7 @@ export const SectorsPage: React.FC = () => {
         </Container>
       </Section>
 
-      {/* 3. Selected Residential Interior Imagery (Explicitly honest attribution) */}
+      {/* 3. Selected Residential Interior Imagery */}
       <Section spacing="generous" bg="stone" className="border-t border-border-custom/30">
         <Container>
           <div className="max-w-2xl mb-12">
@@ -96,7 +97,7 @@ export const SectorsPage: React.FC = () => {
             <div className="space-y-2">
               <AspectFrame aspectRatio="4:3" className="rounded overflow-hidden">
                 <img
-                  src="/images/projects/01-dining-open-plan.jpg"
+                  src={getAssetUrl('/images/projects/01-dining-open-plan.jpg')}
                   alt="Residential dining pavilion reference"
                   className="w-full h-full object-cover"
                 />
@@ -107,7 +108,7 @@ export const SectorsPage: React.FC = () => {
             <div className="space-y-2">
               <AspectFrame aspectRatio="4:3" className="rounded overflow-hidden">
                 <img
-                  src="/images/projects/02-navy-bedroom-primary.jpg"
+                  src={getAssetUrl('/images/projects/02-navy-bedroom-primary.jpg')}
                   alt="Residential master suite reference"
                   className="w-full h-full object-cover"
                 />
@@ -118,7 +119,7 @@ export const SectorsPage: React.FC = () => {
             <div className="space-y-2">
               <AspectFrame aspectRatio="4:3" className="rounded overflow-hidden">
                 <img
-                  src="/images/projects/05-mauve-lounge.jpg"
+                  src={getAssetUrl('/images/projects/05-mauve-lounge.jpg')}
                   alt="Residential formal lounge reference"
                   className="w-full h-full object-cover"
                 />

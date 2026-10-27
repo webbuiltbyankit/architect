@@ -1,3 +1,5 @@
+import { getAssetUrl } from '@/utils/assets';
+
 export interface ProjectImage {
   src: string;
   alt: string;
@@ -44,7 +46,7 @@ export const projectsData: Project[] = [
       { name: "Muted Brass", hex: "#9B815D" }
     ],
     primaryImage: {
-      src: "/images/projects/01-dining-open-plan.jpg",
+      src: getAssetUrl("/images/projects/01-dining-open-plan.jpg"),
       alt: "Open-plan luxury dining room with teal chairs, timber table, and modern pendant chandelier",
       caption: "Primary dining pavilion with integrated background kitchen and bronze partition screens",
       aspectRatio: "4:3",
@@ -52,7 +54,7 @@ export const projectsData: Project[] = [
     },
     secondaryImages: [
       {
-        src: "/images/projects/06-dining-lounge-secondary.jpg",
+        src: getAssetUrl("/images/projects/06-dining-lounge-secondary.jpg"),
         alt: "Secondary perspective of dining space facing full-height drapery and timber entrance doors",
         caption: "Secondary visual study showing boundary drapery, dark wood framing, and layered ambient lighting",
         aspectRatio: "4:3"
@@ -81,7 +83,7 @@ export const projectsData: Project[] = [
       { name: "Cast Brass", hex: "#9B815D" }
     ],
     primaryImage: {
-      src: "/images/projects/02-navy-bedroom-primary.jpg",
+      src: getAssetUrl("/images/projects/02-navy-bedroom-primary.jpg"),
       alt: "Master bedroom suite with tall segmented navy headboard, brass chandelier, and wardrobe storage",
       caption: "Sanctuary bedroom arrangement featuring full-height velvet wall panels and sculptural gold lighting",
       aspectRatio: "4:3",
@@ -89,7 +91,7 @@ export const projectsData: Project[] = [
     },
     secondaryImages: [
       {
-        src: "/images/projects/04-navy-bedroom-seating.jpg",
+        src: getAssetUrl("/images/projects/04-navy-bedroom-seating.jpg"),
         alt: "Alternative view of navy master bedroom with pair of upholstered accent armchairs",
         caption: "Complementary angle highlighting twin indigo armchairs and integrated timber millwork",
         aspectRatio: "4:3"
@@ -118,7 +120,7 @@ export const projectsData: Project[] = [
       { name: "Polished Champagne", hex: "#C7B299" }
     ],
     primaryImage: {
-      src: "/images/projects/03-blush-bedroom-primary.jpg",
+      src: getAssetUrl("/images/projects/03-blush-bedroom-primary.jpg"),
       alt: "Luxury bedroom in soft rose and greige tones featuring circular backlit wall feature",
       caption: "Bedroom composition with halo-lit wall relief and custom velvet lounge furniture",
       aspectRatio: "4:3",
@@ -126,7 +128,7 @@ export const projectsData: Project[] = [
     },
     secondaryImages: [
       {
-        src: "/images/projects/07-blush-bedroom-wardrobe.jpg",
+        src: getAssetUrl("/images/projects/07-blush-bedroom-wardrobe.jpg"),
         alt: "Frontal view of blush bedroom showing wide storage wardrobes, circular art, and seating bench",
         caption: "Frontal perspective displaying balanced wardrobe millwork and bespoke bedroom seating",
         aspectRatio: "4:3"
@@ -155,7 +157,7 @@ export const projectsData: Project[] = [
       { name: "Cream Stone", hex: "#F2EFE9" }
     ],
     primaryImage: {
-      src: "/images/projects/05-mauve-lounge.jpg",
+      src: getAssetUrl("/images/projects/05-mauve-lounge.jpg"),
       alt: "Spacious luxury living room with plum sofas, coffered tray ceiling, and modern center table",
       caption: "Formal reception lounge showing architectural coffered ceiling, plum seating, and bespoke rug",
       aspectRatio: "4:3",

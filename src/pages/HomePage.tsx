@@ -8,10 +8,11 @@ import { editorialCopy, servicesData } from '@/data/copy';
 import { projectsData } from '@/data/projects';
 import { sectorsData } from '@/data/site';
 import { useSeo } from '@/utils/seo';
+import { getAssetUrl } from '@/utils/assets';
 
 const HERO_SLIDES = [
   {
-    image: '/images/projects/01-dining-open-plan.jpg',
+    image: getAssetUrl('/images/projects/01-dining-open-plan.jpg'),
     kicker: 'Architecture / Interiors / Places',
     title: 'Spaces shaped with intention.',
     subtitle: 'Contemporary residential pavilions and interior architecture defined by natural illumination and honest materiality.',
@@ -19,7 +20,7 @@ const HERO_SLIDES = [
     index: '01 / 04',
   },
   {
-    image: '/images/projects/02-navy-bedroom-primary.jpg',
+    image: getAssetUrl('/images/projects/02-navy-bedroom-primary.jpg'),
     kicker: 'Tactile Sanctuary',
     title: 'Proportion, light, and quiet permanence.',
     subtitle: 'Private residential sanctuaries featuring floor-to-ceiling upholstered velvet wall panels and bespoke gold branch lighting.',
@@ -27,7 +28,7 @@ const HERO_SLIDES = [
     index: '02 / 04',
   },
   {
-    image: '/images/projects/03-blush-bedroom-primary.jpg',
+    image: getAssetUrl('/images/projects/03-blush-bedroom-primary.jpg'),
     kicker: 'Sensory Balance',
     title: 'Restraint in form. Richness in texture.',
     subtitle: 'Subtle rose and warm grey interior compositions balancing fluted architectural wall panels with halo backlighting.',
@@ -40,13 +41,12 @@ export const HomePage: React.FC = () => {
   useSeo({
     title: 'Architectural & Interior Design Portfolio',
     description: 'Arun Saini Architects — Private digital concept preview showcasing residential architecture, tailored interiors, and spatial planning.',
-    image: '/images/projects/01-dining-open-plan.jpg',
+    image: getAssetUrl('/images/projects/01-dining-open-plan.jpg'),
   });
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [hoveredServiceImage, setHoveredServiceImage] = useState<string>(servicesData[0].featuredImage);
 
-  // Gentle auto-advance only if user is actively on tab and hasn't hovered
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
@@ -62,7 +62,6 @@ export const HomePage: React.FC = () => {
     <div className="w-full overflow-hidden">
       {/* 1. Cinematic Full-Height Hero Section */}
       <section className="relative w-full h-[100svh] min-h-[640px] flex items-end justify-center bg-ink text-warm-ivory select-none">
-        {/* Background Image Carousel */}
         <div className="absolute inset-0 overflow-hidden">
           {HERO_SLIDES.map((s, idx) => (
             <div
@@ -82,7 +81,6 @@ export const HomePage: React.FC = () => {
           ))}
         </div>
 
-        {/* Hero Overlay Text */}
         <Container className="relative z-10 pb-16 sm:pb-20 md:pb-24">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
@@ -167,7 +165,7 @@ export const HomePage: React.FC = () => {
         </Container>
       </Section>
 
-      {/* 3. Asymmetrical Featured-Work Gallery (2+1 Layout) */}
+      {/* 3. Asymmetrical Featured-Work Gallery */}
       <Section spacing="generous" bg="paper">
         <Container>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-4">
@@ -217,7 +215,7 @@ export const HomePage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[580px]">
           <div className="lg:col-span-7 relative h-[380px] lg:h-auto overflow-hidden">
             <img
-              src="/images/projects/05-mauve-lounge.jpg"
+              src={getAssetUrl('/images/projects/05-mauve-lounge.jpg')}
               alt="Plum velvet reception lounge with coffered ceiling and patterned rug"
               className="w-full h-full object-cover"
               loading="lazy"

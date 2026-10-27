@@ -1,4 +1,5 @@
 import { Service } from './site';
+import { getAssetUrl } from '@/utils/assets';
 
 export const editorialCopy = {
   hero: {
@@ -118,7 +119,7 @@ export const servicesData: Service[] = [
       { question: "Do you design both private homes and commercial buildings?", answer: "Yes, our studio addresses private luxury villas, multi-unit residential spaces, and design-led boutique corporate spaces." },
       { question: "How is structural engineering handled?", answer: "Structural, MEP, and statutory services are coordinated in collaboration with qualified external licensed engineering consultants." }
     ],
-    featuredImage: "/images/projects/01-dining-open-plan.jpg",
+    featuredImage: getAssetUrl("/images/projects/01-dining-open-plan.jpg"),
     imageAlt: "Architectural interior dining space showing open spatial layout and integrated structural elements",
     aspectRatio: "16:9"
   },
@@ -145,7 +146,7 @@ export const servicesData: Service[] = [
       { question: "Can the studio design custom furniture pieces?", answer: "Yes, our interior projects frequently feature bespoke dining tables, headboard walls, and upholstered seating tailored specifically to room dimensions." },
       { question: "How are sample selections approved?", answer: "We review stone slabs, veneer swatches, metal finishes, and textile strike-offs in natural daylight before finalizing orders." }
     ],
-    featuredImage: "/images/projects/02-navy-bedroom-primary.jpg",
+    featuredImage: getAssetUrl("/images/projects/02-navy-bedroom-primary.jpg"),
     imageAlt: "Custom interior bedroom suite with bespoke navy velvet headboard and gold branch chandelier",
     aspectRatio: "16:9"
   },
@@ -172,7 +173,7 @@ export const servicesData: Service[] = [
       { question: "Can space planning be done for existing bare-shell apartments?", answer: "Yes, space planning is especially impactful when starting with an open shell or pre-construction builder layout." },
       { question: "Does this include structural wall removals?", answer: "We identify non-load-bearing partitions for potential reconfiguration, subject to on-site structural audit." }
     ],
-    featuredImage: "/images/projects/05-mauve-lounge.jpg",
+    featuredImage: getAssetUrl("/images/projects/05-mauve-lounge.jpg"),
     imageAlt: "Formal reception lounge showing zoned seating arrangement and coffered ceiling geometry",
     aspectRatio: "16:9"
   },
@@ -198,7 +199,7 @@ export const servicesData: Service[] = [
       { question: "Is this consultation conducted in person or virtually?", answer: "Consultations can be held at our Gurugram studio or conducted via high-definition video conference." },
       { question: "Does booking a consultation obligate me to a full contract?", answer: "No, consultations are standalone advisory engagements with no long-term commitment required." }
     ],
-    featuredImage: "/images/projects/03-blush-bedroom-primary.jpg",
+    featuredImage: getAssetUrl("/images/projects/03-blush-bedroom-primary.jpg"),
     imageAlt: "Refined blush bedroom detail illustrating customized interior design consultation outcomes",
     aspectRatio: "16:9"
   }

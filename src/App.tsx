@@ -18,7 +18,7 @@ import { NotFoundPage } from '@/pages/NotFoundPage';
 
 export const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-warm-ivory text-ink selection:bg-muted-brass/20 selection:text-ink">
         <Navbar />
