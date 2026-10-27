@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #191919;
+  --color-ink-light: #242424;
+  --color-ink-muted: #3a3a3a;
+  --color-warm-ivory: #F7F5F0;
+  --color-paper: #FFFEFC;
+  --color-soft-stone: #E9E5DD;
+  --color-stone-light: #F2EFE9;
+  --color-muted-brass: #9B815D;
+  --color-brass-light: #b39b76;
+  --color-brass-dark: #7e6747;
+  --color-slate-custom: #73716E;
+  --color-border-custom: rgba(25, 25, 25, 0.14);
+  --color-border-light: rgba(25, 25, 25, 0.08);
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --max-width-editorial: 1360px;
+}
+
+:root {
+  --color-ink: #191919;
+  --color-warm-ivory: #F7F5F0;
+  --color-paper: #FFFEFC;
+  --color-soft-stone: #E9E5DD;
+  --color-muted-brass: #9B815D;
+  --color-slate: #73716E;
+  --color-border: rgba(25, 25, 25, 0.14);
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --site-max-width: 1340px;
+}
+
+/* CSS Reset & Editorial Smoothing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-warm-ivory);
+  color: var(--color-ink);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typography Utility Classes */
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.font-ui {
+  font-family: var(--font-sans);
+}
+
+/* Fluid Typography Clamps */
+.text-display-hero {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw + 1rem, 5.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.text-editorial-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 4vw + 1rem, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+.text-editorial-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3vw + 0.5rem, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.text-editorial-h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2vw + 0.5rem, 2.25rem);
+  line-height: 1.25;
+}
+
+.text-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-slate);
+}
+
+.text-caption {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-slate);
+}
+
+/* Custom Safe Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-warm-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-soft-stone);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-brass);
+}
+
+/* Skip Link */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 1.5rem;
+  background: #191919;
+  color: #F7F5F0;
+  padding: 0.75rem 1.25rem;
+  z-index: 9999;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: top 0.2s ease-out;
+  border-radius: 2px;
+}
+.skip-to-content:focus {
+  top: 1.5rem;
+}
